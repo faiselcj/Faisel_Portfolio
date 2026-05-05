@@ -6,94 +6,72 @@
 <title>Mohamed Faisel | DevOps Engineer</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: white;
-}
+body { margin:0; font-family:Arial; background:#0f172a; color:white; }
 
 header {
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(90deg,#1e3a8a,#2563eb);
+    text-align:center;
+    padding:60px;
+    background:linear-gradient(90deg,#1e3a8a,#2563eb);
 }
 
-h1 { font-size: 42px; margin: 0; }
-h2 { color: #38bdf8; }
+h1 { font-size:42px; margin:0; }
+h2 { color:#38bdf8; }
 
-.section {
-    padding: 40px;
-}
+.section { padding:40px; }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    margin: 15px 0;
-    transition: 0.3s;
+    background:#1e293b;
+    padding:20px;
+    margin:15px 0;
+    border-radius:12px;
+    transition:0.3s;
 }
-
-.card:hover {
-    transform: scale(1.03);
-    background: #334155;
-}
+.card:hover { transform:scale(1.03); background:#334155; }
 
 .skills span {
-    display: inline-block;
-    background: #2563eb;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 20px;
+    display:inline-block;
+    background:#2563eb;
+    padding:8px 12px;
+    margin:5px;
+    border-radius:20px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background: #38bdf8;
-    color: black;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.hidden {
-    display: none;
-}
-
-/* IMAGE GALLERY */
+/* IMAGE GRID */
 .gallery {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:15px;
 }
-
 .gallery img {
-    width: 300px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    width:100%;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
 }
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
+.gallery img:hover { transform:scale(1.05); }
 
 /* POPUP */
 .popup {
-    display: none;
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.8);
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.9);
     justify-content:center;
     align-items:center;
 }
+.popup img { max-width:90%; }
 
-.popup img {
-    max-width:80%;
+button {
+    padding:10px 20px;
+    border:none;
+    background:#38bdf8;
+    color:black;
+    cursor:pointer;
+    border-radius:8px;
 }
+
+.hidden { display:none; }
 
 footer {
     text-align:center;
@@ -108,94 +86,103 @@ footer {
 <header>
     <h1>Mohamed Faisel</h1>
     <p>DevOps Engineer | AWS | CI/CD | Docker | Kubernetes</p>
-    <button onclick="toggleContact()">Contact Me</button>
+    <a href="Faisel_DevOps_Resume.pdf" download>
+        <button>Download Resume</button>
+    </a>
 </header>
 
 <div class="section">
-    <h2>👨‍💻 About Me</h2>
-    <p>
-        DevOps Engineer with 2+ years of experience in application support and production environments. Skilled in AWS, CI/CD pipeline implementation, Docker containerization, and Linux administration. Hands-on experience with Jenkins, Git, and Bash scripting. Experience working with Kubernetes and Terraform for container orchestration and infrastructure automation. Built CI/CD pipelines for Dockerized applications and deployed applications on AWS cloud environments. Strong in monitoring tools like Splunk, AppDynamics, and Zabbix. Expertise in incident management, problem management, and production support with high SLA compliance. Passionate about automation, scalability, and building reliable systems.
-    </p>
+<h2>👨‍💻 About Me</h2>
+<p>
+DevOps Engineer with 2+ years of experience in AWS, CI/CD, Docker, Kubernetes and Linux.
+Strong in monitoring tools like Splunk, AppDynamics, and Zabbix. :contentReference[oaicite:0]{index=0}
+</p>
 </div>
 
 <div class="section">
-    <h2>⚙️ Skills</h2>
-    <div class="skills">
-        <span>AWS</span><span>Docker</span><span>Kubernetes</span>
-        <span>Jenkins</span><span>Terraform</span><span>Linux</span>
-        <span>GitHub</span><span>SonarQube</span><span>Splunk</span>
-    </div>
+<h2>⚙️ Skills</h2>
+<div class="skills">
+<span>AWS</span><span>Docker</span><span>Kubernetes</span>
+<span>Jenkins</span><span>Terraform</span><span>Linux</span>
+<span>GitHub</span><span>SonarQube</span><span>Splunk</span>
+</div>
 </div>
 
 <div class="section">
-    <h2>🚀 Projects</h2>
+<h2>🚀 DevOps Projects</h2>
 
-    <div class="card">
-        <h3>AWS Cloud Deployment</h3>
-        <p>Deployed applications on EC2, configured Linux servers, monitored logs.</p>
-    </div>
+<div class="card">
+<h3>End-to-End CI/CD Pipeline (PetClinic)</h3>
+<p>
+Built full pipeline using Jenkins, SonarQube, Nexus, Docker and deployed on AWS EC2 with Tomcat.
+</p>
+</div>
 
-    <div class="card">
-        <h3>CI/CD Pipeline with Jenkins</h3>
-        <p>Automated build and deployment using Jenkins, Git, Docker.</p>
-    </div>
-
-    <div class="card">
-        <h3>PetClinic DevOps Project</h3>
-        <p>End-to-end pipeline using Jenkins, SonarQube, Nexus, Docker, AWS.</p>
-    </div>
+<div class="card">
+<h3>Dockerized Application CI/CD</h3>
+<p>
+Automated build, test and deployment using Jenkins + Docker.
+</p>
+</div>
 
 </div>
 
 <div class="section">
-    <h2>🏗️ DevOps Architecture</h2>
-    <div class="card">
-        <ul>
-            <li>GitHub → Jenkins</li>
-            <li>SonarQube → Code Analysis</li>
-            <li>Maven → Build</li>
-            <li>Nexus → Artifacts</li>
-            <li>Docker → Container</li>
-            <li>AWS EC2 → Deployment</li>
-        </ul>
-    </div>
+<h2>📸 Real Project Screenshots</h2>
+
+<div class="gallery">
+<img src="images/k8s-pod.png" onclick="openImage(this)">
+<img src="images/gcp-cluster.png" onclick="openImage(this)">
+<img src="images/devops-dashboard.png" onclick="openImage(this)">
+<img src="images/server-ui.png" onclick="openImage(this)">
+</div>
+
+</div>
+
+<div id="popup" class="popup" onclick="closeImage()">
+<img id="popup-img">
 </div>
 
 <div class="section">
-    <h2>🎓 Certifications</h2>
-    <div class="card">
-        AWS DevOps | AZ-900 | MCSA | MCSE
-    </div>
+<h2>🏗️ DevOps Architecture</h2>
+<div class="card">
+GitHub → Jenkins → SonarQube → Maven → Nexus → Docker → AWS EC2 → Deployment
+</div>
 </div>
 
 <div class="section">
-    <h2>🏆 Achievements</h2>
-    <div class="card">
-        Pillar Award | Gem Award | 30% Automation Efficiency
-    </div>
+<h2>💼 Experience</h2>
+<div class="card">
+DevOps Engineer – Blue Yonder <br><br>
+✔ L2 Production Support <br>
+✔ Automation using Bash (30% effort reduction) <br>
+✔ Monitoring with Splunk & AppDynamics <br>
+✔ Incident & RCA handling
+</div>
+</div>
+
+<div class="section">
+<h2>🏆 Achievements</h2>
+<div class="card">
+Pillar Award | Gem Award | Automation Excellence
+</div>
 </div>
 
 <div class="section hidden" id="contact">
-    <h2>📞 Contact</h2>
-    <p>Email: mohamed.faiselK@gmail.com</p>
-    <p>Phone: +91-8681956123</p>
-    <p>Location: Trichy</p>
+<h2>📞 Contact</h2>
+<p>Email: mohamed.faiselK@gmail.com</p>
+<p>Phone: +91-8681956123</p>
 </div>
 
 <footer>
-    <p>© 2026 Mohamed Faisel</p>
+<p>© 2026 Mohamed Faisel | DevOps Portfolio</p>
 </footer>
 
 <script>
-function toggleContact(){
-    document.getElementById("contact").classList.toggle("hidden");
-}
-
 function openImage(img){
     document.getElementById("popup").style.display="flex";
     document.getElementById("popup-img").src=img.src;
 }
-
 function closeImage(){
     document.getElementById("popup").style.display="none";
 }
